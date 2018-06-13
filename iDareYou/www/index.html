@@ -6,45 +6,250 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="css/themes/iDareYouThemeRollerTheme.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.5.min.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>iDareYou</title>
 </head>
 <body>
-    <div data-role="page" id="weather-page">
 
-        <div data-role="header" class="header">
-            <h1 id="app-title">Weather App</h1>
-            <a href="/" class="ui-btn ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext" rel="external">Home</a>
-        </div>
+    <!--LoginPage-->
+    <section id="loginPage" data-role="page">
+        <!--<div class="ui-content ui-grid-d">
+            <div class="ui-block-a"></div>
+            <div class="ui-block-b">
+                <p>iDareYou</p>
+            </div>
+            <div class="ui-block-c">
+                <center><img src="images/handNoBackground.png" style="width:75%;" /></center>
+            </div>
+            <div class="ui-block-d">
+                <a class="ui-btn ui-btn-corner-all" href="#tabPage">Log In</a>
+            </div>
+            <div class="ui-block-e"></div>
+        </div>-->
+        <table class="ui-content">
+            <tr>
+                <td>
+                    <p style="text-align:center; font-size:4em; font-style:italic;">iDareYou</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><img src="images/handNoBackground.png" style="width:75%;" /></center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="ui-btn ui-btn-corner-all" href="#tabPage">Log In</a>
+                </td>
+            </tr>
+        </table>
+    </section>
 
-        <div role="main" class="ui-content">
-            <form>
-                <label for="zip-code">Type your zip code:</label>
-                <input id="zip-code-input" name="zip-code" placeholder="eg. 98001" required />
-                <button id="get-weather-btn" data-role="button" data-icon="search">Find Weather</button>
-            </form>
+    <!--Tabpage-->
+    <section id="tabPage" data-role="page">
+        <header data-role="header">
+            <h1>My Dares</h1>
+            <a class="ui-btn ui-btn-icon-notext ui-btn-right ui-icon-plus" href="#newChallengePage">New Challenge</a>
+        </header>
+        <div class="ui-btn-corner-all" data-role="tabs">
+            <div data-role="navbar">
+                <ul>
+                    <li><a class="ui-btn-active" href="#receivedChallenges">Received</a></li>
+                    <li><a href="#createdChallenges">Created</a></li>
+                </ul>
+            </div>
+            <div id="receivedChallenges" class="ui-content">
+                <ul data-role="listview">
+                    <li>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="ui-grid-a">
+                                    <div class="ui-grid-solo">
+                                        <p>O que acontece se eu escrever muita coisa?</p>
+                                    </div>
+                                    <div class="ui-grid-solo">
+                                        <p>O que acontece se eu escrever muita coisa?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="ui-grid-a">
+                                    <div class="ui-block-a">
+                                        <p>O que acontece se eu escrever muita coisa?</p>
+                                    </div>
+                                    <div class="ui-block-b">
+                                        <button data-mini="true" data-theme="b">Review</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="ui-grid-a">
+                                    <div class="ui-grid-solo">
+                                        <p>O que acontece se eu escrever muita coisa?</p>
+                                    </div>
+                                    <div class="ui-grid-solo">
+                                        <p>O que acontece se eu escrever muita coisa?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="ui-grid-a">
+                                    <div class="ui-block-a">
+                                        <p>O que acontece se eu escrever muita coisa?</p>
+                                    </div>
+                                    <div class="ui-block-b">
+                                        <button data-mini="true" data-theme="b">Evidence</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
-            <ul id="weather-data" data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow not-displayed">
-                <li data-role="list-divider" id="title" class="ui-li-divider ui-bar-a"></li>
-                <li><span id="summary"><span id="temperature"></span> F <img src="" /></span></li>
-                <li>Wind: <span id="wind"></span> knots</li>
-                <li>Humidity: <span id="humidity"></span> %</li>
-                <li>Visibility: <span id="visibility"></span></li>
-                <li>Sunrise: <span id="sunrise"></span></li>
-                <li>Sunset: <span id="sunset"></span></li>
-            </ul>
-
-            <div id="error-msg" class="not-displayed">
+            <div id="createdChallenges" class="ui-content">
+                <ul data-role="listview">
+                    <li>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="ui-grid-a">
+                                    <div class="ui-grid-solo">
+                                        <p>O que acontece se eu escrever muita coisa?</p>
+                                    </div>
+                                    <div class="ui-grid-solo">
+                                        <p>O que acontece se eu escrever muita coisa?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="ui-grid-a">
+                                    <div class="ui-block-a">
+                                        <p>O que acontece se eu escrever muita coisa?</p>
+                                    </div>
+                                    <div class="ui-block-b">
+                                        <button data-mini="true" data-theme="b">Approve</button>
+                                        <!--<a class="ui-mini ui-btn ui-btn-corner-all" href="#approvalPage">Approve</a>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="ui-grid-a">
+                                    <div class="ui-grid-solo">
+                                        <p>O que acontece se eu escrever muita coisa?</p>
+                                    </div>
+                                    <div class="ui-grid-solo">
+                                        <p>O que acontece se eu escrever muita coisa?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="ui-grid-a">
+                                    <div class="ui-block-a">
+                                        <p>O que acontece se eu escrever muita coisa?</p>
+                                    </div>
+                                    <div class="ui-block-b">
+                                        <button data-mini="true" data-theme="b">Approve</button>
+                                        <!--<a class="ui-mini ui-btn ui-btn-corner-all" href="#approvalPage">Approve</a>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
 
         </div>
+    </section>
 
-        <footer data-role="footer" data-position="fixed">
-            <h4>Visual Studio Tools for Cordova Demo</h4>
+    <!--newChallengePage-->
+    <section id="newChallengePage" data-role="page">
+        <header data-role="header">
+            <h1>New Challenge</h1>
+        </header>
+
+        <div class="ui-content">
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="background-color:black;">
+                    <div class="ui-grid-duo">
+                        <input type="text" name="dareTitle" placeholder="Title" />
+                        <textarea placeholder="Description"></textarea>
+                    </div>
+                </div>
+
+                <div class="ui-block-b" style="background-color:aqua">
+                    <img style="width:inherit; position:absolute; margin-left:" src="images/UploadIcon.png" alt="Upload a picture" />
+                </div>
+
+                <div class="ui-block-a" style="background-color:aqua">
+                    <div class="ui-grid-duo">
+                        <p>Friends</p>
+                        <textarea placeholder="Friends Names"></textarea>
+                    </div>
+                </div>
+
+                <div class="ui-block-b" style="background-color:black">
+                    <img style="width:inherit; position:absolute;" src="images/MapsIcon.png" />
+                </div>
+            </div>
+        </div>
+
+        <footer data-role="footer">
+            <a class="ui-btn ui-btn-corner-all ui-btn-right" href="#tabPage">DARE!!!</a>
         </footer>
+    </section>
 
-    </div>
+    <!--acceptancePage-->
+    <section id="acceptancePage" data-role="page">
+        <header data-role="header">
+            <h1>Acceptance</h1>
+        </header>
+        <div class="ui-content">
+
+        </div>
+        <footer data-role="footer">
+            <a class="ui-btn ui-btn-corner-all ui-btn-right" href="#tabPage">Bring It On!!!</a>
+            <a class="ui-btn ui-btn-corner-all ui-btn-left" href="#tabPage">Chicken out...</a>
+        </footer>
+    </section>
+
+    <!--approvalPage-->
+    <section id="approvalPage" data-role="page">
+        <header data-role="header">
+            <h1>Approval</h1>
+        </header>
+        <div class="ui-content">
+
+        </div>
+        <footer data-role="footer">
+            <a class="ui-btn ui-btn-corner-all ui-btn-right" href="#tabPage">Approve</a>
+            <a class="ui-btn ui-btn-corner-all ui-btn-left" href="#tabPage">Decline</a>
+        </footer>
+    </section>
+
+    <!--evidencePage-->
+    <section id="evidencePage" data-role="page">
+        <header data-role="header">
+            <h1>Evidence Submitting</h1>
+        </header>
+        <div class="ui-content">
+
+        </div>
+        <footer data-role="footer">
+            <a class="ui-btn ui-btn-corner-all ui-btn-right" href="#tabPage">Submit</a>
+            <a class="ui-btn ui-btn-corner-all ui-btn-left" href="#tabPage">Chicken out...</a>
+        </footer>
+    </section>
 
     <script type="text/javascript" src="scripts/jquery-1.8.0.min.js"></script>
     <script type="text/javascript" src="scripts/jquery.mobile-1.4.5.min.js"></script>
