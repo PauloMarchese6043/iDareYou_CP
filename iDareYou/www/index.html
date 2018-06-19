@@ -16,19 +16,6 @@
 
     <!--LoginPage-->
     <section id="loginPage" data-role="page">
-        <!--<div class="ui-content ui-grid-d">
-            <div class="ui-block-a"></div>
-            <div class="ui-block-b">
-                <p>iDareYou</p>
-            </div>
-            <div class="ui-block-c">
-                <center><img src="images/handNoBackground.png" style="width:75%;" /></center>
-            </div>
-            <div class="ui-block-d">
-                <a class="ui-btn ui-btn-corner-all" href="#tabPage">Log In</a>
-            </div>
-            <div class="ui-block-e"></div>
-        </div>-->
         <table class="ui-content">
             <tr>
                 <td>
@@ -52,7 +39,7 @@
     <section id="tabPage" data-role="page">
         <header data-role="header">
             <h1>My Dares</h1>
-            <a class="ui-btn ui-btn-icon-notext ui-btn-right ui-icon-plus" href="#newChallengePage">New Challenge</a>
+            <a class="ui-btn ui-btn-icon-notext ui-btn-right ui-btn-corner-all ui-icon-plus" href="#newChallengePage">New Challenge</a>
         </header>
         <div class="ui-btn-corner-all" data-role="tabs">
             <div data-role="navbar">
@@ -61,112 +48,13 @@
                     <li><a href="#createdChallenges">Created</a></li>
                 </ul>
             </div>
+
             <div id="receivedChallenges" class="ui-content">
-                <ul data-role="listview">
-                    <li>
-                        <div class="ui-grid-a">
-                            <div class="ui-block-a">
-                                <div class="ui-grid-a">
-                                    <div class="ui-grid-solo">
-                                        <p>O que acontece se eu escrever muita coisa?</p>
-                                    </div>
-                                    <div class="ui-grid-solo">
-                                        <p>O que acontece se eu escrever muita coisa?</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ui-block-b">
-                                <div class="ui-grid-a">
-                                    <div class="ui-block-a">
-                                        <p>O que acontece se eu escrever muita coisa?</p>
-                                    </div>
-                                    <div class="ui-block-b">
-                                        <button data-mini="true" data-theme="b">Review</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ui-grid-a">
-                            <div class="ui-block-a">
-                                <div class="ui-grid-a">
-                                    <div class="ui-grid-solo">
-                                        <p>O que acontece se eu escrever muita coisa?</p>
-                                    </div>
-                                    <div class="ui-grid-solo">
-                                        <p>O que acontece se eu escrever muita coisa?</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ui-block-b">
-                                <div class="ui-grid-a">
-                                    <div class="ui-block-a">
-                                        <p>O que acontece se eu escrever muita coisa?</p>
-                                    </div>
-                                    <div class="ui-block-b">
-                                        <button data-mini="true" data-theme="b">Evidence</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                <ul id="receivedChallengesList" data-role="listview"></ul>
             </div>
 
             <div id="createdChallenges" class="ui-content">
-                <ul data-role="listview">
-                    <li>
-                        <div class="ui-grid-a">
-                            <div class="ui-block-a">
-                                <div class="ui-grid-a">
-                                    <div class="ui-grid-solo">
-                                        <p>O que acontece se eu escrever muita coisa?</p>
-                                    </div>
-                                    <div class="ui-grid-solo">
-                                        <p>O que acontece se eu escrever muita coisa?</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ui-block-b">
-                                <div class="ui-grid-a">
-                                    <div class="ui-block-a">
-                                        <p>O que acontece se eu escrever muita coisa?</p>
-                                    </div>
-                                    <div class="ui-block-b">
-                                        <button data-mini="true" data-theme="b">Approve</button>
-                                        <!--<a class="ui-mini ui-btn ui-btn-corner-all" href="#approvalPage">Approve</a>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ui-grid-a">
-                            <div class="ui-block-a">
-                                <div class="ui-grid-a">
-                                    <div class="ui-grid-solo">
-                                        <p>O que acontece se eu escrever muita coisa?</p>
-                                    </div>
-                                    <div class="ui-grid-solo">
-                                        <p>O que acontece se eu escrever muita coisa?</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ui-block-b">
-                                <div class="ui-grid-a">
-                                    <div class="ui-block-a">
-                                        <p>O que acontece se eu escrever muita coisa?</p>
-                                    </div>
-                                    <div class="ui-block-b">
-                                        <button data-mini="true" data-theme="b">Approve</button>
-                                        <!--<a class="ui-mini ui-btn ui-btn-corner-all" href="#approvalPage">Approve</a>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                <ul id="createdChallengesList" data-role="listview"></ul>
             </div>
 
         </div>
@@ -174,87 +62,172 @@
 
     <!--newChallengePage-->
     <section id="newChallengePage" data-role="page">
-        <header data-role="header">
+        <div data-role="header">
             <h1>New Challenge</h1>
-        </header>
+        </div>
 
-        <div class="ui-content">
+        <div data-role="main" class="ui-content">
             <div class="ui-grid-a">
-                <div class="ui-block-a" style="background-color:black;">
+                <div id="blockA" class="ui-block-a">
                     <div class="ui-grid-duo">
-                        <input type="text" name="dareTitle" placeholder="Title" />
-                        <textarea placeholder="Description"></textarea>
+                        <input id="newChallengeTitle" type="text" name="dareTitle" placeholder="Title" />
+                        <textarea id="newChallengeDetails" placeholder="Description"></textarea>
                     </div>
                 </div>
 
-                <div class="ui-block-b" style="background-color:aqua">
-                    <img style="width:inherit; position:absolute; margin-left:" src="images/UploadIcon.png" alt="Upload a picture" />
+                <div id="blockB" class="ui-block-b">
+                    <img class="ui-corner-all" src="images/UploadIcon.png" alt="Upload a picture" />
                 </div>
-
-                <div class="ui-block-a" style="background-color:aqua">
+            </div>
+            <p></p>
+            <p></p>
+            <div class="ui-grid-a">
+                <div id="blockC" class="ui-block-a">
                     <div class="ui-grid-duo">
                         <p>Friends</p>
-                        <textarea placeholder="Friends Names"></textarea>
+                        <textarea id="newChallengeFriends" placeholder="Friends Names"></textarea>
                     </div>
                 </div>
 
-                <div class="ui-block-b" style="background-color:black">
-                    <img style="width:inherit; position:absolute;" src="images/MapsIcon.png" />
+                <div id="blockD" class="ui-block-b">
+                    <img class="ui-corner-all" src="images/MapsIcon.png" />
                 </div>
             </div>
         </div>
 
-        <footer data-role="footer">
-            <a class="ui-btn ui-btn-corner-all ui-btn-right" href="#tabPage">DARE!!!</a>
+        <footer data-role="footer" id="footer">
+            <button id="newChallengeBtn" class="ui-btn-corner-all ui-btn-right" data-theme="b">DARE!!!</button>
         </footer>
     </section>
 
     <!--acceptancePage-->
     <section id="acceptancePage" data-role="page">
-        <header data-role="header">
+        <div data-role="header">
             <h1>Acceptance</h1>
-        </header>
-        <div class="ui-content">
-
         </div>
-        <footer data-role="footer">
-            <a class="ui-btn ui-btn-corner-all ui-btn-right" href="#tabPage">Bring It On!!!</a>
-            <a class="ui-btn ui-btn-corner-all ui-btn-left" href="#tabPage">Chicken out...</a>
+
+        <div data-role="main" class="ui-content">
+            <div class="ui-grid-a">
+                <div id="blockA" class="ui-block-a">
+                    <div class="ui-grid-duo">
+                        <input id="acceptanceTitle" type="text" name="dareTitle" placeholder="Title" readonly/>
+                        <textarea id="acceptanceDetails" placeholder="Description" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="blockB" class="ui-block-b">
+                    <img class="ui-corner-all" src="images/UploadIcon.png" alt="Upload a picture" />
+                </div>
+            </div>
+            <p></p>
+            <p></p>
+            <div class="ui-grid-a">
+                <div id="blockC" class="ui-block-a">
+                    <div class="ui-grid-duo">
+                        <p>Friends</p>
+                        <textarea id="acceptanceFriends" placeholder="Friends Names" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="blockD" class="ui-block-b">
+                    <img class="ui-corner-all" src="images/MapsIcon.png" />
+                </div>
+            </div>
+        </div>
+
+        <footer data-role="footer" id="footer">
+            <button id="acceptanceSubmitBtn" class="ui-btn-corner-all ui-btn-right" data-theme="b">Bring It On!!!</button>
+            <button id="acceptanceDeclineBtn" class="ui-btn-corner-all ui-btn-left" data-theme="b">Chicken out...</button>
         </footer>
     </section>
 
     <!--approvalPage-->
     <section id="approvalPage" data-role="page">
-        <header data-role="header">
+        <div data-role="header">
             <h1>Approval</h1>
-        </header>
-        <div class="ui-content">
-
         </div>
-        <footer data-role="footer">
-            <a class="ui-btn ui-btn-corner-all ui-btn-right" href="#tabPage">Approve</a>
-            <a class="ui-btn ui-btn-corner-all ui-btn-left" href="#tabPage">Decline</a>
+
+        <div data-role="main" class="ui-content">
+            <div class="ui-grid-a">
+                <div id="blockA" class="ui-block-a">
+                    <div class="ui-grid-duo">
+                        <input id="approvalTitle" type="text" name="dareTitle" placeholder="Title" readonly/>
+                        <textarea id="approvalDetails" placeholder="Description" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="blockB" class="ui-block-b">
+                    <img class="ui-corner-all" src="images/UploadIcon.png" alt="Upload a picture" />
+                </div>
+            </div>
+            <p></p>
+            <p></p>
+            <div class="ui-grid-a">
+                <div id="blockC" class="ui-block-a">
+                    <div class="ui-grid-duo">
+                        <p>Friends</p>
+                        <textarea id="approvalFriends" placeholder="Friends Names" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="blockD" class="ui-block-b">
+                    <img class="ui-corner-all" src="images/MapsIcon.png" />
+                </div>
+            </div>
+        </div>
+
+        <footer data-role="footer" id="footer">
+            <button id="approvalApproveBtn" class="ui-btn-corner-all ui-btn-right" data-theme="b">Approve</button>
+            <button id="approvalRejectBtn" class="ui-btn-corner-all ui-btn-left" data-theme="b">Reject</button>
         </footer>
     </section>
 
     <!--evidencePage-->
     <section id="evidencePage" data-role="page">
-        <header data-role="header">
+        <div data-role="header">
             <h1>Evidence Submitting</h1>
-        </header>
-        <div class="ui-content">
-
         </div>
-        <footer data-role="footer">
-            <a class="ui-btn ui-btn-corner-all ui-btn-right" href="#tabPage">Submit</a>
-            <a class="ui-btn ui-btn-corner-all ui-btn-left" href="#tabPage">Chicken out...</a>
+
+        <div data-role="main" class="ui-content">
+            <div class="ui-grid-a">
+                <div id="blockA" class="ui-block-a">
+                    <div class="ui-grid-duo">
+                        <input id="evidenceTitle" type="text" name="dareTitle" placeholder="Title" readonly/>
+                        <textarea id="evidenceDetails" placeholder="Description"></textarea>
+                    </div>
+                </div>
+
+                <div id="blockB" class="ui-block-b">
+                    <img class="ui-corner-all" src="images/UploadIcon.png" alt="Upload a picture" />
+                </div>
+            </div>
+            <p></p>
+            <p></p>
+            <div class="ui-grid-a">
+                <div id="blockC" class="ui-block-a">
+                    <div class="ui-grid-duo">
+                        <p>Friends</p>
+                        <textarea id="evidenceFriends" placeholder="Friends Names" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="blockD" class="ui-block-b">
+                    <img class="ui-corner-all" src="images/MapsIcon.png" />
+                </div>
+            </div>
+        </div>
+
+        <footer data-role="footer" id="footer">
+            <button id="evidenceSubmitBtn" class="ui-btn-corner-all ui-btn-right" data-theme="b">Submit</button>
+            <button id="evidenceRefuseBtn" class="ui-btn-corner-all ui-btn-left" data-theme="b">Chicken out...</button>
         </footer>
     </section>
 
-    <script type="text/javascript" src="scripts/jquery-1.8.0.min.js"></script>
-    <script type="text/javascript" src="scripts/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="scripts/models.js"></script>
     <script type="text/javascript" src="scripts/index.js"></script>
 </body>
 </html>
